@@ -1,0 +1,37 @@
+.wpcme-terms-panel {
+    border: 1px solid #ddd;
+    overflow: auto;
+    padding: 0 .9em;
+    margin-top: 0.6em;
+    max-height: 200px;
+}
+
+#wpcme-search-term {
+    width: 158px;
+    float: left;
+    height: 28px;
+    margin: 0 4px 0 0;
+    padding-right: 22px;
+}
+
+.wpcme-search-clear {
+    padding-left: 5px;
+}
+
+.spinner-parent {
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: auto;
+    display: inline-block;
+}
+
+.wpcme-spinner {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+}
+
+.wpcme-container {
+    padding-top: 6px;
+}
