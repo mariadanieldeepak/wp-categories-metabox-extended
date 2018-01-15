@@ -14,13 +14,13 @@ to your post in your WordPress editor.
 
 == Description ==  
 
-WP Categories Metabox Extended replaces the default Categories metabox on your WordPress editor. The Categories metabox is replaced only on \"Add New Post\" screen in the WordPress Admin dashboard.
+WP Categories Metabox Extended replaces the default Categories metabox on your WordPress editor. The Categories metabox is replaced only on "Add New Post" screen in the WordPress Admin dashboard.
 
 Once the plugin is installed and activated, you can use it to search and assign Categories to your WordPress post.
 
 == Installation ==
   
-1. The easiest way to install the plugin is from \"Add New Plugin\" screen.
+1. The easiest way to install the plugin is from "Add New Plugin" screen.
 2. You can also upload the entire `wp-categories-metabox-extended` folder to `/wp-content/plugins/` via FTP/SFTP.
 
 == Screenshots ==  
