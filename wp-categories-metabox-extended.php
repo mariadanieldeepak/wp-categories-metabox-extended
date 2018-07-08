@@ -3,7 +3,7 @@
 Plugin Name: WP Categories Metabox Extended
 Plugin URI:  https://mariadanieldeepak.com/wordpress/wp-categories-metabox-extended/
 Description: This plugin includes a search field to the Categories Metabox in the WordPress Editor.
-Version:     1.0.0
+Version:     1.0.2
 Author:      Maria Daniel Deepak
 Author URI:  https://danieldeepak.com
 License:     GPL2
