@@ -3,9 +3,9 @@
 Contributors: mariadanieldeepak  
 Tags: category, search, admin, editor  
 Requires at least: 4.7  
-Tested up to: 4.9.1  
+Tested up to: 4.9.7
 Requires PHP: 5.3.0  
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL2  
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html  
 
@@ -38,6 +38,9 @@ No. WP Categories Metabox Extended shows up only when you add/edit WordPress def
 5. A message is shown when the Category does not exist.
 
 == Changelog ==  
+
+v1.0.2 (Dev time: 0.5 hours)
+- Removed Console logs
 
 v1.0.1 (Dev time: 0.5 hours)
 - Fixed typographical errors in README
