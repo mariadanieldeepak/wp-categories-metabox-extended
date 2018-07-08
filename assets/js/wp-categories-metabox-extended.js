@@ -140,8 +140,6 @@
             var termOpter = $( '.wpcme-terms-ul-li-select' ),
                 userOptedTermID;
 
-            console.log( 'isExistingTermsSet: ' + isExistingTermsSet );
-
             if ( isExistingTermsSet ) {
                 $.each( DOM.$selectedTerms.children(), function() {
                     userOptedTermID = $( this ).val();
