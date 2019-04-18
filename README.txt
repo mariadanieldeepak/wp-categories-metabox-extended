@@ -39,8 +39,10 @@ No. WP Categories Metabox Extended shows up only when you add/edit WordPress def
 
 == Changelog ==  
 
-v1.1.0 (Dev time: 1 hour)
+v1.1.0 (Dev time: 3 hours)
 - Improved README file
+- Refactored the plugin
+- Made compatible with WordPress v5.0 (Gutenberg)
 
 v1.0.2 (Dev time: 0.5 hours)
 - Removed Console logs
