@@ -5,7 +5,7 @@ Tags: category, search, admin, editor
 Requires at least: 4.7  
 Tested up to: 4.9.7
 Requires PHP: 5.3.0  
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 License: GPL2  
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html  
 
@@ -14,9 +14,9 @@ to your post in your WordPress editor.
 
 == Description ==  
 
-WP Categories Metabox Extended replaces the default Categories metabox on your WordPress editor. The Categories metabox is replaced only on "Add New Post" screen in the WordPress Admin dashboard.
+WP Categories Metabox Extended extends the Category metabox on your WordPress editor. Once installed the Category metabox gets a search bar with which you search Categories. Also, this is only seen on "Add New Post" screen in the WordPress Admin dashboard.
 
-Once the plugin is installed and activated, you can use it to search and assign Categories to your WordPress post.
+From [WordPress 5.0](https://wordpress.org/support/wordpress-version/version-5-0/), the search bar is included with the Categories metabox. In case you choose to use the Classic editor by using plugins like [Disable Gutenberg](https://wordpress.org/plugins/disable-gutenberg/), then WP Categories Metabox Extended plugin will continue to extend the Categories metabox for the default "Post" post type.
 
 == Installation ==
   
@@ -38,6 +38,11 @@ No. WP Categories Metabox Extended shows up only when you add/edit WordPress def
 5. A message is shown when the Category does not exist.
 
 == Changelog ==  
+
+v1.1.0 (Dev time: 3 hours)
+- Improved README file
+- Refactored the plugin
+- Made compatible with WordPress v5.0 (Gutenberg)
 
 v1.0.2 (Dev time: 0.5 hours)
 - Removed Console logs
