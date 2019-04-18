@@ -46,7 +46,7 @@ namespace WPCategoriesMetaboxExtended;
  *      <?php
  *      new \Foo\Bar\Qux\QuuxTest;
  */
-class WPCategoriesMetaboxExtendedAutoLoader {
+class AutoLoader {
 	/**
 	 * An associative array where the key is a namespace prefix and the value
 	 * is an array of base directories for classes in that namespace.
