@@ -13,7 +13,7 @@ class UIManager implements Loadie {
 	/**
 	 * @var array $allowed_screens
 	 */
-	public $allowed_screens;
+	public $allowed_screens = array( 'post' );
 
 	/**
 	 * @var string $current_screen_id
@@ -45,26 +45,40 @@ class UIManager implements Loadie {
 	 * Extended.
 	 *
 	 * @since 1.0.0
+	 *
+	 * @see https://codex.wordpress.org/Plugin_API/Action_Reference/current_screen
 	 */
 	public function on_current_screen() {
-
 		$this->current_screen_id = $this->get_current_screen_id();
 
-		$allowed_screens = array( 'post' );
+		/**
+		 * Included for backwards compatibility.
+		 *
+		 * @deprecated 1.1.0
+		 *
+		 * TODO: To be removed in the next version.
+		 */
+		$allowed_screens = apply_filters( 'wpcme_show_search_terms_metabox_on_screens', $this->allowed_screens );
 
 		/**
 		 * Filters the list of screens where WP Categories Metabox Extended
 		 * should be shown.
 		 *
+		 * @since 1.1.0 Rename filter.
 		 * @since 1.0.0
 		 *
 		 * @param array $allowed_screens List of screen IDs where
 		 *                               WP Categories Metabox Extended
 		 *                               will be displayed.
 		 */
-		$allowed_screens = apply_filters( 'wpcme_show_search_terms_metabox_on_screens', $allowed_screens );
+		$allowed_screens = apply_filters( 'wpcme_extended_metabox_screens', $allowed_screens );
 
 		if ( ! in_array( $this->current_screen_id, $allowed_screens, true ) ) {
+			return;
+		}
+
+		// Do not add metabox when Gutenberg is enabled.
+		if ( use_block_editor_for_post_type( $this->current_screen_id ) ) {
 			return;
 		}
 
@@ -170,9 +184,10 @@ class UIManager implements Loadie {
         <div class="wpcme-container">
             <div class="spinner-parent">
                 <input id="wpcme-search-term" type="text" name="wpcme-search-term" size="16"/>
-                <span class="wpcme-spinner"><img src="/wp-admin/images/loading.gif" /></span>
+                <span class="wpcme-spinner"><img src="/wp-admin/images/loading.gif"/></span>
             </div>
-            <input type="button" class="button" id="wpcme-search-clear" value="<?php _e( 'Clear', 'wp-categories-metabox-extended' ) ?>"/>
+            <input type="button" class="button" id="wpcme-search-clear"
+                   value="<?php _e( 'Clear', 'wp-categories-metabox-extended' ) ?>"/>
 
             <div class="wpcme-terms-panel">
                 <ul id="wpcme-terms-ul">
