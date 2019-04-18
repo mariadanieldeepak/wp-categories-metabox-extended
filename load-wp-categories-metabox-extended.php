@@ -28,16 +28,19 @@ function wpcme_load_wp_categories_metabox_extended( $plugin_file ) {
 
 	$loader->register();
 
-	if ( ! isset( $wpcme ) ) {
-		$ui_manager  = new \WPCategoriesMetaboxExtended\UI\UIManager();
-		$term_helper = new \WPCategoriesMetaboxExtended\Core\Utilities\TermHelper();
-
-		$wpcme = new \WPCategoriesMetaboxExtended\Core\WPCategoriesMetaboxExtended( $plugin_file, $ui_manager, $term_helper );
-		$wpcme->add_loadie( new \WPCategoriesMetaboxExtended\Core\Request\WPCategoriesMetaboxExtendedAction() );
-
-		add_action( 'plugins_loaded', array( $wpcme, 'load' ) );
+	// Avoid repeated instantiations.
+	if ( isset( $wpcme ) ) {
+		return;
 	}
 
+	$ui_manager  = new \WPCategoriesMetaboxExtended\UI\UIManager();
+	$term_helper = new \WPCategoriesMetaboxExtended\Core\Utilities\TermHelper();
+
+	// Dependency injection principle.
+	$wpcme = new \WPCategoriesMetaboxExtended\Core\WPCategoriesMetaboxExtended( $plugin_file, $ui_manager, $term_helper );
+	$wpcme->add_loadie( new \WPCategoriesMetaboxExtended\Core\Request\WPCategoriesMetaboxExtendedAction() );
+
+	add_action( 'plugins_loaded', array( $wpcme, 'load' ) );
 }
 
 /**
