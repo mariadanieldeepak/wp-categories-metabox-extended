@@ -3,9 +3,9 @@
 Contributors: mariadanieldeepak  
 Tags: category, search, admin, editor  
 Requires at least: 4.7  
-Tested up to: 4.9.7
+Tested up to: 5.1.1
 Requires PHP: 5.3.0  
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPL2  
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html  
 
